@@ -429,32 +429,50 @@
   
 <li>create branch gh-pages on your project repository</li>
   
-<li>clone gh-pages branch <tt>shell
-$ git clone https://github.com/ualbertalib/${project.name}.git -b gh-pages ${project.docs.dir}
-</tt></li>
+<li>clone gh-pages branch</li>
+</ul>
+
+<div class="source">
+<pre>$ git clone https://github.com/ualbertalib/${project.name}.git -b gh-pages ${project.docs.dir}
+</pre></div>
+
+<ul>
   
-<li>
-<p>clone docs-site-template project <tt>shell
-$ git clone https://github.com/ualbertalib/docs-site-template.git ${docs.site.template.dir}
-</tt></p></li>
+<li>clone docs-site-template project</li>
+</ul>
+
+<div class="source">
+<pre>$ git clone https://github.com/ualbertalib/docs-site-template.git ${docs.site.template.dir}
+</pre></div>
+
+<ul>
   
-<li>
-<p>change directory and edit your documents <tt>shell
-$ cd ${docs.site.template.dir}
-</tt></p></li>
+<li>change directory and edit your documents</li>
+</ul>
+
+<div class="source">
+<pre>$ cd ${docs.site.template.dir}
+</pre></div>
+
+<ul>
   
-<li>
-<p>generate project documents <tt>
-$ mvn site -Dsite.output.dir=${project.docs.dir}
-</tt></p></li>
+<li>generate project documents</li>
+</ul>
+
+<div class="source">
+<pre>$ mvn site -Dsite.output.dir=${project.docs.dir}
+</pre></div>
+
+<ul>
   
-<li>
-<p>commit and push to gh-pages branch <tt>
-$ git add .
+<li>commit and push to gh-pages branch</li>
+</ul>
+
+<div class="source">
+<pre>$ git add .
 $ git commit -m &quot;Update project documents&quot;
 $ git push
-</tt></p></li>
-</ul></div>
+</pre></div></div>
 <div class="section">
 <h4>View project documents<a name="View_project_documents"></a></h4>
 
