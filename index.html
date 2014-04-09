@@ -425,25 +425,36 @@
 <div class="section">
 <h4>Generate project documents<a name="Generate_project_documents"></a></h4>
 
-<div class="source">
-<pre># clone template project
-$ git clone https://github.com/ualbertalib/docs-site-template.git
-
-# change directory and edit your documents
-$ cd docs-site-template
-
-# generate project documents
-$ mvn site -Dsite.output.dir=${site.output.dir}
-
-# initailize git repository for project documents branch
-$ cd ${site.output.dir}
-$ git init
-$ git remote add gh-pages ${your.git.project.url}
-
-# commit and push to gh-pages branch
+<ul>
+  
+<li>create branch gh-pages on your project repository</li>
+  
+<li>clone gh-pages branch <tt>shell
+$ git clone https://github.com/ualbertalib/${project.name}.git -b gh-pages ${project.docs.dir}
+</tt></li>
+  
+<li>
+<p>clone docs-site-template project <tt>shell
+$ git clone https://github.com/ualbertalib/docs-site-template.git ${docs.site.template.dir}
+</tt></p></li>
+  
+<li>
+<p>change directory and edit your documents <tt>shell
+$ cd ${docs.site.template.dir}
+</tt></p></li>
+  
+<li>
+<p>generate project documents <tt>
+$ mvn site -Dsite.output.dir=${project.docs.dir}
+</tt></p></li>
+  
+<li>
+<p>commit and push to gh-pages branch <tt>
+$ git add .
 $ git commit -m &quot;Update project documents&quot;
 $ git push
-</pre></div></div>
+</tt></p></li>
+</ul></div>
 <div class="section">
 <h4>View project documents<a name="View_project_documents"></a></h4>
 
